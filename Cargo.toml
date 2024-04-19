@@ -1,0 +1,20 @@
+[package]
+name = "html-images-inliner"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+base64 = "0.22.0"
+clap = { version = "4.5.4", features = ["derive"] }
+kuchikiki = "0.8.2"
+mime = "0.3.17"
+mime_guess = "2.0.4"
+rayon = "1.10.0"
+
+[profile.release]
+strip = true
+lto = true
+codegen-units = 1
+panic = "abort"
