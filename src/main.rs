@@ -59,7 +59,7 @@ fn get_modification<'a, I: Iterator<Item = &'a NodeDataRef<ElementData>>>(
     }
 
     fn bytes_to_base64(b: Option<(Vec<u8>, Mime)>) -> Option<String> {
-        b.map(|opt| format!("data: {};base64, {}", opt.1, B64_STANDARD.encode(opt.0)))
+        b.map(|opt| format!("data:{};base64,{}", opt.1, B64_STANDARD.encode(opt.0)))
     }
 
     let src_attrs = img_elements
