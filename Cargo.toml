@@ -18,7 +18,7 @@ unsafe_op_in_unsafe_fn = "deny"
 
 [dependencies]
 base64 = "0.22.1"
-clap = { version = "4.5.18", features = ["derive"] }
+clap = { version = "4.5.20", features = ["derive"] }
 kuchikiki = "0.8.2"
 mime = "0.3.17"
 mime_guess = "2.0.5"
